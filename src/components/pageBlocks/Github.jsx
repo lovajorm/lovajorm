@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import { useOnScreen } from '../hooks/CustomHooks'
 
 function Github() {
+    const ref = useRef()
+    const isVisible = useOnScreen(ref)
     return (
         <div className='github-container'>
             <a
@@ -8,7 +11,11 @@ function Github() {
                 target='_blank'
                 rel='noopener noreferrer'
             >
-                <div className='github-inner inner'></div>
+                <div ref={ref}>
+                    <div className={isVisible ? 'github-inner' : ''}>
+                        <div className=''></div>
+                    </div>
+                </div>
             </a>
         </div>
     )

@@ -15,6 +15,14 @@
     }
     .inner {
         max-width: 320px;
+        .text {
+            padding: 1rem 1rem 1rem;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 320px;
+        }
     }
     .introduction-container,
     .techniques-container,
@@ -25,9 +33,31 @@
         margin: 9rem 1rem;
         display: flex;
         justify-content: center;
+        flex-direction: column;
     }
-    .techniques-inner {
-        .col {
+    .techniques-container {
+        .techniques-headings {
+            display: flex;
+            flex-direction: column;
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+        .inner {
+            flex-direction: column !important;
+            z-index: 50;
+            .col {
+                width: 100%;
+                .logos-platforms {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    .github-container {
+        .github-inner {
             width: 100%;
         }
     }

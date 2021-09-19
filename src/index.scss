@@ -17,6 +17,18 @@ h1 {
 }
 h2 {
     font-family: 'Krona One', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 100;
+    font-size: 2.9rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: left;
+    padding-bottom: 1rem;
+    @media (max-width: 768px) {
+        font-size: 1.8rem;
+    }
+}
+
+::selection {
+    color: #000;
+    background-color: #fff;
 }
