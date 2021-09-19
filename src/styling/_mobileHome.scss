@@ -1,0 +1,48 @@
+.mobile {
+    .intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin-top: 0;
+        .copy {
+            padding: 0 1rem;
+            h1 {
+                font-size: 1.9rem;
+            }
+        }
+    }
+    .inner {
+        max-width: 320px;
+    }
+    .introduction-container,
+    .techniques-container,
+    .github-container,
+    .myprojects-container,
+    .contact-container {
+        position: relative;
+        margin: 9rem 1rem;
+        display: flex;
+        justify-content: center;
+    }
+    .techniques-inner {
+        .col {
+            width: 100%;
+        }
+    }
+    .myprojects-container {
+        .myprojects-inner {
+            height: 780px;
+            .projects {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1.5rem;
+                .inner {
+                    margin: 1.3rem 0;
+                }
+            }
+        }
+    }
+}

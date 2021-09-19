@@ -1,0 +1,54 @@
+.intro {
+    height: 100%;
+    margin-top: 40rem;
+    .copy {
+        display: flex;
+        flex-direction: column-reverse;
+        h1 {
+            margin-top: 0;
+        }
+    }
+}
+.techniques-inner {
+    .col {
+        width: 50%;
+        .logos-platforms {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+                height: 70px;
+                width: 200px;
+                margin-top: 1.5rem;
+            }
+        }
+        .logos {
+            padding: 1rem 2rem;
+            .logo {
+                margin: 1rem;
+                width: 75px;
+                height: 75px;
+            }
+        }
+    }
+}
+.github-inner {
+    background-image: url('/img/GitHub-Mark-Light-120px-plus.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+    width: 250px;
+}
+.projects {
+    display: flex;
+    .inner {
+        height: 200px;
+        width: 200px;
+        margin: 2rem;
+        padding: 0;
+        img {
+            height: 200px;
+            width: 200px;
+        }
+    }
+}
