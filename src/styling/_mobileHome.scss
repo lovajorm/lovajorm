@@ -1,4 +1,8 @@
 .mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     .intro {
         display: flex;
         flex-direction: column;
@@ -14,14 +18,11 @@
         }
     }
     .inner {
-        max-width: 320px;
+        padding: 0;
         .text {
-            padding: 1rem 1rem 1rem;
-            left: 0;
-            right: 0;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 320px;
+            padding: 0;
+            margin: 0;
+            max-width: 350px;
         }
     }
     .introduction-container,
@@ -34,8 +35,10 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
+        min-height: 100vh;
     }
     .techniques-container {
+        width: 300px;
         .techniques-headings {
             display: flex;
             flex-direction: column;
@@ -43,34 +46,76 @@
                 font-size: 1.8rem;
             }
         }
-        .inner {
-            flex-direction: column !important;
-            z-index: 50;
-            .col {
-                width: 100%;
-                .logos-platforms {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
+        .techniques-inner {
+            position: relative;
+            width: 70%;
+            height: 800px;
+            padding: 1.2rem 1.4rem 2rem 1.4rem;
+            .techniques-heading {
+                position: absolute;
+                transform: rotate(90deg);
+                bottom: 100px;
+                right: -150px;
+            }
+            .inner {
+                flex-direction: column !important;
+                z-index: 50;
+                .col {
+                    width: 100%;
+                    .logos-platforms {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        img {
+                            margin-top: 0.5rem;
+                        }
+                    }
                 }
             }
         }
     }
     .github-container {
         .github-inner {
-            width: 100%;
+            width: 280px;
         }
     }
     .myprojects-container {
         .myprojects-inner {
-            height: 780px;
+            max-width: 487px;
+            height: unset;
+            padding: 1.2rem 1.4rem 2rem 1.4rem;
             .projects {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                margin-top: 1.5rem;
+                padding: 0;
+                margin-top: 1rem;
                 .inner {
                     margin: 1.3rem 0;
+                }
+            }
+        }
+    }
+    .contact-container {
+        .contact-inner {
+            max-width: 487px;
+            height: unset;
+            padding: 1.2rem 1.4rem 2rem 1.4rem;
+            form {
+                padding: 0;
+                width: 100%;
+                .form-control {
+                    padding-left: 0;
+                }
+                input,
+                textarea {
+                    width: 94%;
+                }
+                input[type='submit'] {
+                    width: 100%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: block;
                 }
             }
         }

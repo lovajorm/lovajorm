@@ -1,17 +1,37 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { useOnScreen } from '../hooks/CustomHooks'
 
 function Techniques() {
     const ref = useRef()
     const isVisible = useOnScreen(ref)
+
+    const [width, setWidth] = useState(window.innerWidth)
+    const [isMobile, setIsMobile] = useState()
+
+    function handleWindowSizeChange() {
+        setWidth(window.innerWidth)
+    }
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowSizeChange)
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange)
+        }
+    }, [])
+
+    useEffect(() => {
+        setIsMobile(width <= 768)
+    }, [width])
     return (
         <div className='techniques-container'>
             <div className='techniques-headings'>
                 <h2>What I offer</h2>
-                <h2>Techniques</h2>
+                {!isMobile && <h2>Techniques</h2>}
             </div>
             <div ref={ref}>
                 <div className={isVisible ? 'techniques-inner' : ''}>
+                    {isMobile && (
+                        <h2 className='techniques-heading'>Techniques</h2>
+                    )}
                     <div className='inner'>
                         <div className='col'>
                             <div className='text'>

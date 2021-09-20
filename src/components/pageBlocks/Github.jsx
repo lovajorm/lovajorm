@@ -12,9 +12,7 @@ function Github() {
                 rel='noopener noreferrer'
             >
                 <div ref={ref}>
-                    <div className={isVisible ? 'github-inner' : ''}>
-                        <div className=''></div>
-                    </div>
+                    <div className={isVisible ? 'github-inner' : ''}></div>
                 </div>
             </a>
         </div>
