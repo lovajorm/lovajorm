@@ -38,7 +38,9 @@
         min-height: 100vh;
     }
     .techniques-container {
-        width: 300px;
+        min-width: 300px;
+        max-width: 100%;
+        padding-right: 3rem;
         .techniques-headings {
             display: flex;
             flex-direction: column;
@@ -48,8 +50,7 @@
         }
         .techniques-inner {
             position: relative;
-            width: 70%;
-            height: 800px;
+            width: calc(100% - 50px);
             padding: 1.2rem 1.4rem 2rem 1.4rem;
             .techniques-heading {
                 position: absolute;
