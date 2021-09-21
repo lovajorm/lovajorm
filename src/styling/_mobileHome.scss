@@ -37,10 +37,15 @@
         flex-direction: column;
         min-height: 100vh;
     }
+    .introduction-container {
+        .introduction-inner {
+            padding: 1.2rem 1.4rem 2rem 1.4rem;
+        }
+    }
     .techniques-container {
-        min-width: 300px;
+        min-width: 260px;
         max-width: 100%;
-        padding-right: 3rem;
+        padding-right: 2.6rem;
         .techniques-headings {
             display: flex;
             flex-direction: column;
@@ -50,13 +55,12 @@
         }
         .techniques-inner {
             position: relative;
-            width: calc(100% - 50px);
             padding: 1.2rem 1.4rem 2rem 1.4rem;
             .techniques-heading {
                 position: absolute;
                 transform: rotate(90deg);
                 bottom: 100px;
-                right: -150px;
+                right: -145px;
             }
             .inner {
                 flex-direction: column !important;
@@ -90,12 +94,14 @@
             padding: 1.2rem 1.4rem 2rem 1.4rem;
             .projects {
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
                 padding: 0;
-                margin-top: 1rem;
+                margin-top: 0rem;
+                width: 100%;
                 .inner {
-                    margin: 1.3rem 0;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
             }
         }

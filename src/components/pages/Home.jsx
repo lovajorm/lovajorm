@@ -58,7 +58,7 @@ function Home() {
             {isMobile ? (
                 <Mobile />
             ) : (
-                <>
+                <div className='desktop'>
                     <div className='content-block'>
                         <Intro />
                         <div className='squares'>
@@ -90,6 +90,7 @@ function Home() {
                                                 style={{ width: scrollWidth }}
                                             >
                                                 <div
+                                                    className='row-full-length'
                                                     style={{
                                                         height: '100%',
                                                         width: '5800px',
@@ -124,7 +125,7 @@ function Home() {
                         <div className='second-row'></div>
                         <Contact />
                     </div>
-                </>
+                </div>
             )}
         </>
     )
