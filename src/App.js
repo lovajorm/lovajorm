@@ -9,7 +9,6 @@ import Contact from './components/pages/Contact'
 function App() {
     return (
         <div className='App'>
-            {/* <Header /> */}
             <Router>
                 <Switch>
                     <Route path='/'>
