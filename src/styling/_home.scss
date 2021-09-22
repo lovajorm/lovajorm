@@ -1,194 +1,169 @@
-.desktop {
-    .content-block {
-        height: 100vh;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        .squares {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            .first-row {
-                position: relative;
-                width: 50%;
-                height: 575px;
-                top: 35px;
-                z-index: 1;
-            }
-        }
-    }
-    .content {
-        display: flex;
-        height: 100vh;
-        // .row-full-length {
-        //     height: 100%;
-        //     width: 8800px;
-        //     @media (min-width: 992px) {
-        //         width: 8800px;
-        //     }
-        //     @media (min-width: 1200px) {
-        //         width: 8800px;
-        //     }
-        //     @media (min-width: 1500px) {
-        //         width: 8800px;
-        //     }
-        //     @media (min-width: 2297px) {
-        //         width: 6800px;
-        //     }
-        // }
-    }
-    .content > div {
-        background-size: cover;
-        background-position: center;
-        flex-shrink: 0;
-    }
-    .content-first {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: -25%;
-    }
-    .squares-row {
+.content-block {
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .squares {
         display: flex;
         flex-direction: row;
-        height: 100%;
-        //width: 4500px;
-        // justify-content: space-between;
+        width: 100%;
         .first-row {
             position: relative;
-            left: 650px;
-            // border-bottom: 3px dashed #ffffff;
-            height: 25%;
-            width: 4500px;
-            z-index: 10;
-            @media (min-width: 992px) {
-                left: 800px;
-            }
-            @media (min-width: 1200px) {
-                left: 900px;
-            }
-            @media (min-width: 1500px) {
-                left: 1080px;
-            }
-            @media (min-width: 2297px) {
-                left: 1500px;
-            }
+            width: 50%;
+            height: 575px;
+            top: 35px;
+            z-index: 1;
         }
-        .introduction-container {
-            position: absolute;
+    }
+}
+
+.content {
+    display: flex;
+    height: 100vh;
+}
+.content > div {
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+.content-first {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -25%;
+}
+
+.squares-row {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    .first-row {
+        position: relative;
+        left: 650px;
+        border-bottom: 3px dashed #ffffff;
+        height: 25%;
+        width: 5500px;
+        z-index: 10;
+        @media (min-width: 992px) {
+            left: 800px;
+        }
+        @media (min-width: 1200px) {
+            left: 900px;
+        }
+        @media (min-width: 1500px) {
+            left: 1080px;
+        }
+        @media (min-width: 2297px) {
+            left: 1500px;
+        }
+    }
+    .introduction-container {
+        position: absolute;
+        top: 1%;
+        z-index: 50;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 500px;
+        height: 400px;
+        @media (min-width: 1500px) {
             top: 1%;
-            z-index: 50;
-            left: 0;
-            right: 0;
-            margin-left: auto;
-            margin-right: auto;
+        }
+        @media (min-width: 2297px) {
+            top: 7%;
+        }
+        .introduction-inner {
             width: 500px;
             height: 400px;
-            @media (min-width: 1500px) {
-                top: 1%;
-            }
+            background-color: #000;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            height: 350px;
+            top: -350px;
+            width: 2px;
+            border-left: 3px dashed #ffffff;
+            left: 50%;
+            z-index: -1;
             @media (min-width: 2297px) {
-                top: 7%;
+                height: 700px;
+                top: -700px;
             }
-            .introduction-inner {
-                width: 500px;
+        }
+    }
+    .techniques-container {
+        position: absolute;
+        left: 2500px;
+        z-index: 50;
+        top: 25%;
+        transform: translateY(-50%);
+        .techniques-inner {
+            height: 400px;
+            width: 800px;
+            display: flex;
+        }
+    }
+    .github-container {
+        position: absolute;
+        z-index: 50;
+        left: 4500px;
+        top: 25%;
+        transform: translateY(-50%);
+    }
+    .myprojects-outer {
+        position: relative;
+        width: 100vw;
+        top: 0;
+        .myprojects-container {
+            position: absolute;
+            z-index: 50;
+            left: 21%;
+            height: 400px;
+            width: 800px;
+            top: 25%;
+            transform: translateY(-50%);
+            .myprojects-inner {
                 height: 400px;
+                width: 100%;
                 background-color: #000;
             }
             &:before {
                 content: '';
                 position: absolute;
-                height: 350px;
-                top: -350px;
+                height: 3005px;
                 border-left: 3px dashed #ffffff;
+                top: 400px;
+                z-index: -1;
                 left: 50%;
-                z-index: -1;
-                @media (min-width: 2297px) {
-                    height: 700px;
-                    top: -700px;
-                }
-            }
-            &:after {
-                content: '';
-                position: absolute;
-                width: 3000px;
-                top: 0px;
-                // left: -350px;
-                border-top: 3px dashed #ffffff;
-                left: 0;
-                z-index: -1;
-            }
-        }
-        .techniques-container {
-            position: absolute;
-            left: 2000px;
-            z-index: 50;
-            top: 25%;
-            transform: translateY(-50%);
-            .techniques-inner {
-                height: 400px;
-                width: 800px;
-                display: flex;
-            }
-        }
-        .github-container {
-            position: absolute;
-            z-index: 50;
-            left: 3500px;
-            top: 25%;
-            transform: translateY(-50%);
-        }
-        .myprojects-outer {
-            position: relative;
-            width: 100vw;
-            top: 0;
-            .myprojects-container {
-                position: absolute;
-                z-index: 50;
-                left: 21%;
-                height: 400px;
-                width: 800px;
-                top: 25%;
-                transform: translateY(-50%);
-                .myprojects-inner {
-                    height: 400px;
-                    width: 100%;
-                    background-color: #000;
-                }
-                &:before {
-                    content: '';
-                    position: absolute;
-                    height: 3005px;
-                    border-left: 3px dashed #ffffff;
-                    top: 400px;
-                    z-index: -1;
-                    left: 50%;
-                }
             }
         }
     }
-    .squares-last {
-        display: flex;
-        flex-direction: row;
-        height: 1400px;
-        width: 100%;
-        position: relative;
-        .contact-container {
-            position: absolute;
-            bottom: 500px;
+}
+
+.squares-last {
+    display: flex;
+    flex-direction: row;
+    height: 1400px;
+    width: 100%;
+    position: relative;
+    .contact-container {
+        position: absolute;
+        bottom: 500px;
+        z-index: 50;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 500px;
+        .contact-inner {
+            height: 580px;
+            width: 100%;
             z-index: 50;
-            left: 0;
-            right: 0;
-            margin-left: auto;
-            margin-right: auto;
-            width: 500px;
-            .contact-inner {
-                height: 580px;
-                width: 100%;
-                z-index: 50;
-            }
         }
     }
 }
