@@ -45,7 +45,7 @@
         left: 650px;
         border-bottom: 3px dashed #ffffff;
         height: 25%;
-        width: 4500px;
+        width: 5500px;
         z-index: 10;
         @media (min-width: 992px) {
             left: 800px;
@@ -98,7 +98,7 @@
     }
     .techniques-container {
         position: absolute;
-        left: 2000px;
+        left: 2500px;
         z-index: 50;
         top: 25%;
         transform: translateY(-50%);
@@ -111,7 +111,7 @@
     .github-container {
         position: absolute;
         z-index: 50;
-        left: 3500px;
+        left: 4500px;
         top: 25%;
         transform: translateY(-50%);
     }

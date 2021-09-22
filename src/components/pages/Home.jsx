@@ -92,7 +92,7 @@ function Home() {
                                                 <div
                                                     style={{
                                                         height: '100%',
-                                                        width: '5800px',
+                                                        width: '7800px',
                                                     }}
                                                 >
                                                     <div className='content-first'>
