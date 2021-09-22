@@ -12,15 +12,11 @@ function MyProjects() {
                 <div ref={ref}>
                     <div className={isVisible ? 'myprojects-inner' : ''}>
                         <div className='inner'>
-                            <div className='text'>
-                                Lorem Ipsum is simply dummy text of the printing
-                                and typesetting industry. Lorem Ipsum has been
-                                the industry's standard dummy text ever since
-                                the 1500s, when an unknown printer took a galley
-                                of type and scrambled it to make a type specimen
-                                book.
-                            </div>
                             <div className='projects'>
+                            <div className='text'>
+                                For Gute glass I have done a static webpage in pure html, 
+                                css and javascript. 
+                            </div>
                                 <a
                                     href='https://www.guteglass.se/'
                                     target='_blank'
@@ -34,6 +30,11 @@ function MyProjects() {
                                         />
                                     </div>
                                 </a>
+                                <div className='text'>
+                                For Gute glass I have also done a webapplication, 
+                                should preferably be viewd on a mobile device. 
+                                Front-end is done in React, with a .NET core api in the back. Firebase authentication and google cloud storage and hosting.
+                            </div>
                                 <a
                                     href='https://mjukglassbaren.guteglass.se/'
                                     target='_blank'
