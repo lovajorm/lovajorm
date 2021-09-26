@@ -26,24 +26,34 @@
             max-width: 350px;
         }
     }
+    .outer {
+        margin: 9rem 1rem;
+    }
     .introduction-container,
     .techniques-container,
     .github-container,
     .myprojects-container,
     .contact-container {
         position: relative;
-        margin: 9rem 1rem;
+        //margin: 9rem 1rem;
         display: flex;
         justify-content: center;
         flex-direction: column;
         min-height: 100vh;
         z-index: 1;
         background-color: unset;
+        min-width: 100%;
+        height: 100%;
     }
     .introduction-container {
         z-index: 2;
         opacity: 0.8;
         .introduction-inner {
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 340px;
             padding: 1.2rem 1.4rem 2rem 1.4rem;
             .text {
                 opacity: 1;
@@ -75,6 +85,9 @@
                 z-index: 50;
                 .col {
                     width: 100%;
+                    .text {
+                        padding: 0;
+                    }
                     .logos-platforms {
                         display: flex;
                         flex-direction: column;
@@ -96,6 +109,10 @@
     .github-container {
         .github-inner {
             width: 280px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     .myprojects-container {
@@ -131,7 +148,11 @@
     }
     .contact-container {
         .contact-inner {
-            max-width: 487px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 400px;
             height: unset;
             padding: 1.2rem 1.4rem 2rem 1.4rem;
             form {
