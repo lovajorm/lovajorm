@@ -24,17 +24,28 @@ function Techniques() {
     return (
         <div className='outer'>
             <div className='techniques-container'>
-                {/* <div ref={ref}>
-                {isVisible && (
-                    <> */}
-                <div className='techniques-headings'>
+                <div
+                    className={
+                        isVisible
+                            ? 'techniques-headings child visible'
+                            : 'techniques-headings child'
+                    }
+                >
                     <h2>What I offer</h2>
                     {!isMobile && <h2>Techniques</h2>}
                 </div>
                 <div ref={ref}>
                     <div className={isVisible ? 'techniques-inner' : ''}>
                         {isMobile && (
-                            <h2 className='techniques-heading'>Techniques</h2>
+                            <h2
+                                className={
+                                    isVisible
+                                        ? 'techniques-heading child visible'
+                                        : 'techniques-heading child'
+                                }
+                            >
+                                Techniques
+                            </h2>
                         )}
                         <div className='inner'>
                             <div className='col'>
@@ -93,9 +104,6 @@ function Techniques() {
                         </div>
                     </div>
                 </div>
-                {/* </>
-                )}
-            </div> */}
             </div>
         </div>
     )
