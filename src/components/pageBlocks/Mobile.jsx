@@ -13,7 +13,7 @@ function Mobile() {
             <Introduction />
             <div className='blueprint-1'></div>
             <Techniques />
-            <img className='blueprint-2' src='img/black.png' alt='blueprint' />
+            {/* <img className='blueprint-2' src='img/black.png' alt='blueprint' /> */}
             <Github />
             <MyProjects />
             <Contact />

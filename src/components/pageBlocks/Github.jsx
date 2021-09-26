@@ -15,7 +15,11 @@ function Github() {
                     >
                         <div ref={ref}>
                             <div
-                                className={isVisible ? 'github-inner' : ''}
+                                className={
+                                    isVisible
+                                        ? 'github-inner github-no-border'
+                                        : 'github-no-border'
+                                }
                             ></div>
                         </div>
                     </a>

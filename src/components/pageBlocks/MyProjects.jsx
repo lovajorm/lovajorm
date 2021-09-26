@@ -9,12 +9,15 @@ function MyProjects() {
         <div className='myprojects-outer'>
             <div className='outer'>
                 <div className='myprojects-container'>
-                    {/* <div ref={ref}>
-                    {isVisible && (
-                        <> */}
                     <h2>My projects</h2>
                     <div ref={ref}>
-                        <div className={isVisible ? 'myprojects-inner' : ''}>
+                        <div
+                            className={
+                                isVisible
+                                    ? 'myprojects-inner myprojects-no-border'
+                                    : 'myprojects-no-border'
+                            }
+                        >
                             <div className='inner'>
                                 <div className='projects'>
                                     <div className='col'>
@@ -65,9 +68,6 @@ function MyProjects() {
                             </div>
                         </div>
                     </div>
-                    {/* </>
-                    )}
-                </div> */}
                 </div>
             </div>
         </div>
