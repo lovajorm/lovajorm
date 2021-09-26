@@ -2,9 +2,6 @@ import React from 'react'
 import './App.scss'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './components/pages/Home'
-import Projects from './components/pages/Projects'
-import About from './components/pages/About'
-import Contact from './components/pages/Contact'
 
 function App() {
     return (
@@ -14,7 +11,7 @@ function App() {
                     <Route path='/'>
                         <Home />
                     </Route>
-                    <Route path='/projects'>
+                    {/* <Route path='/projects'>
                         <Projects />
                     </Route>
                     <Route path='/about'>
@@ -22,7 +19,7 @@ function App() {
                     </Route>
                     <Route path='/Contact'>
                         <Contact />
-                    </Route>
+                    </Route> */}
                 </Switch>
             </Router>
         </div>

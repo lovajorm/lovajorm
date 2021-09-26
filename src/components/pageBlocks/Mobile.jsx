@@ -11,10 +11,13 @@ function Mobile() {
         <div className='mobile'>
             <Intro />
             <Introduction />
+            <div className='blueprint-1'></div>
             <Techniques />
+            <img className='blueprint-2' src='img/black.png' alt='blueprint' />
             <Github />
             <MyProjects />
             <Contact />
+            <img className='blueprint-3' src='img/black.png' alt='blueprint' />
         </div>
     )
 }

@@ -90,7 +90,6 @@ function Home() {
                                                 style={{ width: scrollWidth }}
                                             >
                                                 <div
-                                                    className='row-full-length'
                                                     style={{
                                                         height: '100%',
                                                         width: '7800px',
@@ -98,10 +97,9 @@ function Home() {
                                                 >
                                                     <div className='content-first'>
                                                         <img
-                                                            src={
-                                                                'img/black.png'
-                                                            }
-                                                            alt='blue'
+                                                            className='blueprint-1'
+                                                            src='img/black.png'
+                                                            alt='blueprint'
                                                         />
                                                     </div>
                                                     <div className='squares-row'>
@@ -109,6 +107,7 @@ function Home() {
                                                         <div className='second-row'></div>
                                                         <Introduction />
                                                         <Techniques />
+                                                        <div className='blueprint-2'></div>
                                                         <Github />
                                                         <MyProjects />
                                                     </div>
@@ -124,6 +123,11 @@ function Home() {
                         <div className='first-row'></div>
                         <div className='second-row'></div>
                         <Contact />
+                        <img
+                            className='blueprint-3'
+                            src='img/black.png'
+                            alt='blueprint'
+                        />
                     </div>
                 </div>
             )}

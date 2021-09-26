@@ -18,7 +18,6 @@
 .techniques-container,
 .github-container,
 .contact-container {
-    background-color: #000;
     .introduction-inner,
     .myprojects-inner,
     .techniques-inner,
@@ -26,7 +25,8 @@
     .contact-inner {
         position: relative;
         &:after {
-            z-index: 0;
+            background-color: #000;
+            z-index: -1;
             position: absolute;
             content: '';
             height: 100%;
@@ -44,6 +44,13 @@
         }
     }
 }
+.introduction-container {
+    .introduction-inner {
+        .text {
+            padding: 2rem 3rem 2.5rem;
+        }
+    }
+}
 .techniques-container {
     .techniques-headings {
         display: flex;
@@ -57,6 +64,9 @@
         z-index: 50;
         .col {
             width: 50%;
+            .text {
+                padding: 2rem 3rem 0;
+            }
             .logos-platforms {
                 display: flex;
                 flex-direction: column;
@@ -87,23 +97,48 @@
         width: 250px;
     }
 }
-.projects {
-    display: flex;
-    padding-left: 3rem;
-    z-index: 50;
-    .inner {
-        margin-top: 2rem;
-        margin-right: 3rem;
-        height: 200px;
-        width: 200px;
-        padding: 1rem;
-        border: 2px solid rgba(255, 255, 255, 0.616);
-        border-radius: 5px;
-        box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.383),
-            0px 0px 15px rgba(255, 255, 255, 0.329);
-        img {
-            height: 200px;
-            width: 200px;
+.myprojects-container {
+    .myprojects-inner {
+        padding: 0rem 0rem 2rem;
+        background-color: unset !important;
+        .projects {
+            display: flex;
+            padding-left: 3rem;
+            z-index: 50;
+            .col {
+                display: flex;
+                flex-direction: column;
+                .text {
+                    min-height: 150px;
+                    max-width: 380px;
+                    margin-top: 2rem;
+                    padding-right: 1rem;
+                }
+            }
+            .inner.project {
+                margin-top: 1rem;
+                margin-right: 3rem;
+                height: 200px;
+                width: 200px;
+                padding: 1rem;
+                border: 2px solid rgba(255, 255, 255, 0.616);
+                border-radius: 5px;
+                box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.383),
+                    0px 0px 15px rgba(255, 255, 255, 0.329);
+                img {
+                    height: 200px;
+                    width: 200px;
+                }
+            }
+        }
+    }
+}
+
+.contact-container {
+    .contact-inner {
+        padding-bottom: 2rem;
+        .text {
+            padding: 2rem 3rem 0;
         }
     }
 }

@@ -13,6 +13,7 @@ export function useOnScreen(ref) {
         return () => {
             observer.disconnect()
         }
+        // eslint-disable-next-line
     }, [])
 
     return isIntersecting

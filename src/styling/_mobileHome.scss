@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
     .intro {
         display: flex;
         flex-direction: column;
@@ -36,10 +37,17 @@
         justify-content: center;
         flex-direction: column;
         min-height: 100vh;
+        z-index: 1;
+        background-color: unset;
     }
     .introduction-container {
+        z-index: 2;
+        opacity: 0.8;
         .introduction-inner {
             padding: 1.2rem 1.4rem 2rem 1.4rem;
+            .text {
+                opacity: 1;
+            }
         }
     }
     .techniques-container {
@@ -77,6 +85,8 @@
                     }
                     .logos {
                         padding: 0;
+                        display: flex;
+                        justify-content: center;
                     }
                 }
             }
@@ -92,16 +102,28 @@
             max-width: 487px;
             height: unset;
             padding: 1.2rem 1.4rem 2rem 1.4rem;
+            .row {
+                flex-direction: column;
+            }
             .projects {
                 flex-direction: column;
                 padding: 0;
                 margin-top: 0rem;
                 width: 100%;
-                .inner {
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                .col {
+                    .text {
+                        min-height: unset;
+                        max-width: 380px;
+                        margin-top: 1rem;
+                        padding-right: 1rem;
+                    }
+                    .inner.project {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 0;
+                    }
                 }
             }
         }
@@ -129,5 +151,34 @@
                 }
             }
         }
+    }
+    .blueprint-1 {
+        position: absolute;
+        bottom: 45%;
+        left: 0;
+        z-index: 1;
+        filter: brightness(0.7);
+        width: 100vw;
+        height: 300vh;
+        background-image: url('/img/blueprint3.svg');
+        background-attachment: fixed;
+        background-repeat: repeat-y;
+        background-size: 100%;
+    }
+    .blueprint-2 {
+        position: absolute;
+        bottom: 30%;
+        left: 0;
+        z-index: 0;
+        filter: brightness(3);
+        height: 150vh;
+    }
+    .blueprint-3 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+        filter: brightness(3);
+        height: 100vh;
     }
 }

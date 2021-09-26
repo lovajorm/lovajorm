@@ -34,7 +34,6 @@
     position: absolute;
     top: -25%;
 }
-
 .squares-row {
     display: flex;
     flex-direction: row;
@@ -60,6 +59,19 @@
             left: 1500px;
         }
     }
+    .blueprint-2 {
+        position: absolute;
+        top: 0;
+        left: 1100px;
+        z-index: 1;
+        filter: brightness(0.7);
+        width: 500px;
+        height: 1000px;
+        background-image: url('/img/blueprint3.svg');
+        background-attachment: fixed;
+        background-repeat: repeat-y;
+        background-size: 100%;
+    }
     .introduction-container {
         position: absolute;
         top: 1%;
@@ -77,8 +89,8 @@
             top: 7%;
         }
         .introduction-inner {
-            width: 500px;
-            height: 400px;
+            width: 100%;
+            height: 100%;
             background-color: #000;
         }
         &:before {
@@ -100,10 +112,10 @@
         position: absolute;
         left: 2500px;
         z-index: 50;
-        top: 25%;
+        top: 23%;
         transform: translateY(-50%);
         .techniques-inner {
-            height: 400px;
+            height: 100%;
             width: 800px;
             display: flex;
         }
@@ -112,7 +124,7 @@
         position: absolute;
         z-index: 50;
         left: 4500px;
-        top: 25%;
+        top: 26%;
         transform: translateY(-50%);
     }
     .myprojects-outer {
@@ -122,13 +134,11 @@
         .myprojects-container {
             position: absolute;
             z-index: 50;
-            left: 21%;
-            height: 400px;
-            width: 800px;
+            left: 70%;
             top: 25%;
-            transform: translateY(-50%);
+            transform: translateY(-65%);
             .myprojects-inner {
-                height: 400px;
+                height: 100%;
                 width: 100%;
                 background-color: #000;
             }
@@ -161,9 +171,12 @@
         margin-right: auto;
         width: 500px;
         .contact-inner {
-            height: 580px;
+            height: 100%;
             width: 100%;
             z-index: 50;
         }
+    }
+    .blueprint-3 {
+        filter: brightness(4);
     }
 }
