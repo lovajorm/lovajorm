@@ -107,6 +107,8 @@
         }
     }
     .github-container {
+        width: 280px;
+        height: 572px;
         .github-inner {
             width: 280px;
             height: 200px;
@@ -177,7 +179,7 @@
     }
     .blueprint-1 {
         position: absolute;
-        bottom: 45%;
+        top: 5%;
         left: 0;
         z-index: 1;
         filter: brightness(0.7);
