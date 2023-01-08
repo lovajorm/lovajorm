@@ -1,184 +1,355 @@
 .desktop {
-    .content-block {
-        height: 100vh;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        .squares {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            .first-row {
-                position: relative;
-                width: 50%;
-                height: 575px;
-                top: 35px;
-                z-index: 1;
-            }
-        }
-    }
-
-    .content {
-        display: flex;
-        height: 100vh;
-    }
-    .content > div {
-        background-size: cover;
-        background-position: center;
-        flex-shrink: 0;
-    }
-    .content-first {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: -25%;
-    }
-    .squares-row {
-        display: flex;
-        flex-direction: row;
-        height: 100%;
-        width: 100%;
-        .first-row {
-            position: relative;
-            left: 650px;
-            border-bottom: 3px dashed #ffffff;
-            height: 25%;
-            width: 5500px;
-            z-index: 10;
-            @media (min-width: 992px) {
-                left: 800px;
-            }
-            @media (min-width: 1200px) {
-                left: 900px;
-            }
-            @media (min-width: 1500px) {
-                left: 1080px;
-            }
-            @media (min-width: 2297px) {
-                left: 1500px;
-            }
-        }
-        .blueprint-2 {
-            position: absolute;
-            top: 0;
-            left: 1100px;
-            z-index: 1;
-            filter: brightness(0.7);
-            width: 500px;
-            height: 1000px;
-            background-image: url('/img/blueprint3.svg');
-            background-attachment: fixed;
-            background-repeat: repeat-y;
-            background-size: 100%;
-        }
-        .introduction-container {
-            position: absolute;
-            top: 1%;
-            z-index: 50;
-            left: 0;
-            right: 0;
-            margin-left: auto;
-            margin-right: auto;
-            width: 500px;
-            height: 400px;
-            @media (min-width: 1500px) {
-                top: 1%;
-            }
-            @media (min-width: 2297px) {
-                top: 7%;
-            }
-            .introduction-inner {
-                width: 100%;
-                height: 100%;
-                background-color: #000;
-            }
-            &:before {
-                content: '';
-                position: absolute;
-                height: 350px;
-                top: -350px;
-                width: 2px;
-                border-left: 3px dashed #ffffff;
-                left: 50%;
-                z-index: -1;
-                @media (min-width: 2297px) {
-                    height: 700px;
-                    top: -700px;
-                }
-            }
-        }
-        .techniques-container {
-            position: absolute;
-            left: 2500px;
-            z-index: 50;
-            top: 23%;
-            transform: translateY(-50%);
-            .techniques-inner {
-                height: 100%;
-                width: 800px;
-                display: flex;
-            }
-        }
-        .github-container {
-            position: absolute;
-            z-index: 50;
-            left: 4500px;
-            top: 26%;
-            transform: translateY(-50%);
-        }
-        .myprojects-outer {
-            position: relative;
-            width: 100vw;
-            top: 0;
-            .myprojects-container {
-                position: absolute;
-                z-index: 50;
-                left: 70%;
-                top: 25%;
-                transform: translateY(-65%);
-                .myprojects-inner {
-                    height: 100%;
-                    width: 100%;
-                    background-color: #000;
-                }
-                &:before {
-                    content: '';
-                    position: absolute;
-                    height: 3005px;
-                    border-left: 3px dashed #ffffff;
-                    top: 400px;
-                    z-index: -1;
-                    left: 50%;
-                }
-            }
-        }
-    }
-
-    .squares-last {
-        display: flex;
-        flex-direction: row;
-        height: 1400px;
-        width: 100%;
+  .content-block {
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .squares {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      .first-row {
         position: relative;
-        .contact-container {
-            position: absolute;
-            bottom: 500px;
-            z-index: 50;
-            left: 0;
-            right: 0;
-            margin-left: auto;
-            margin-right: auto;
-            width: 500px;
-            .contact-inner {
-                height: 100%;
-                width: 100%;
-                z-index: 50;
-            }
-        }
-        .blueprint-3 {
-            filter: brightness(4);
-        }
+        width: 50%;
+        height: 575px;
+        top: 35px;
+        z-index: 1;
+      }
     }
+  }
+
+  .content {
+    display: flex;
+    height: 100vh;
+  }
+  .content > div {
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+  }
+  .content-first {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -25%;
+  }
+  .squares-row {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    .first-row {
+      position: relative;
+      left: 650px;
+      //border-bottom: 3px dashed #ffffff;
+      height: 25%;
+      width: 6800px;
+      z-index: 10;
+      @media (min-width: 992px) {
+        left: 800px;
+      }
+      // @media (min-width: 1050px) {
+      //     width: 6600px;
+      // }
+      // @media (min-width: 1100px) {
+      //     width: 5800px;
+      // }
+      // @media (min-width: 1100px) {
+      //     width: 5800px;
+      // }
+      // @media (min-width: 1100px) {
+      //     width: 5800px;
+      // }
+      // @media (min-width: 1400px) {
+      //     width: 5800px;
+      // }
+      @media (min-width: 1200px) {
+        left: 900px;
+      }
+      @media (min-width: 1500px) {
+        left: 1080px;
+      }
+      @media (min-width: 2297px) {
+        left: 1500px;
+      }
+    }
+    .blueprint-2 {
+      position: absolute;
+      top: 0;
+      left: 1100px;
+      z-index: 1;
+      filter: brightness(0.7);
+      width: 500px;
+      height: 1000px;
+      background-image: url("/img/blueprint3.svg");
+      background-attachment: fixed;
+      background-repeat: repeat-y;
+      background-size: 100%;
+    }
+    .introduction-container {
+      position: absolute;
+      top: 1%;
+      z-index: 50;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 500px;
+      height: 400px;
+      @media (min-width: 1500px) {
+        top: 1%;
+      }
+      @media (min-width: 2297px) {
+        top: 7%;
+      }
+      .introduction-inner {
+        width: 100%;
+        height: 100%;
+      }
+      // &:before {
+      //     content: '';
+      //     position: absolute;
+      //     height: 350px;
+      //     top: -350px;
+      //     width: 2px;
+      //     border-left: 3px dashed #ffffff;
+      //     left: 50%;
+      //     z-index: -1;
+      //     @media (min-width: 2297px) {
+      //         height: 700px;
+      //         top: -700px;
+      //     }
+      // }
+    }
+    .techniques-container {
+      position: absolute;
+      left: 2500px;
+      z-index: 50;
+      top: 23%;
+      transform: translateY(-50%);
+      .techniques-inner {
+        height: 100%;
+        width: 800px;
+        display: flex;
+      }
+    }
+    .github-container {
+      position: absolute;
+      z-index: 50;
+      left: 4500px;
+      top: 26%;
+      transform: translateY(-50%);
+    }
+    .myprojects-outer {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      top: -240px;
+      left: 6800px;
+      .myprojects-container {
+        position: absolute;
+        width: 600px;
+        z-index: 50;
+        top: 50%;
+        right: 33%;
+        transform: translate(65%, -50%);
+        @media (min-width: 780px) {
+          right: 35%;
+        }
+        @media (min-width: 800px) {
+          right: 38%;
+        }
+        @media (min-width: 825px) {
+          right: 42%;
+        }
+        @media (min-width: 850px) {
+          right: 45%;
+        }
+        @media (min-width: 875px) {
+          right: 48%;
+        }
+        @media (min-width: 900px) {
+          right: 50%;
+        }
+        @media (min-width: 925px) {
+          right: 53%;
+        }
+        @media (min-width: 950px) {
+          right: 55%;
+        }
+        @media (min-width: 975px) {
+          right: 58%;
+        }
+        @media (min-width: 1000px) {
+          right: 60%;
+        }
+        @media (min-width: 1025px) {
+          right: 63%;
+        }
+        @media (min-width: 1050px) {
+          right: 65%;
+        }
+        @media (min-width: 1075px) {
+          right: 67%;
+        }
+        @media (min-width: 1100px) {
+          right: 69%;
+        }
+        @media (min-width: 1125px) {
+          right: 70%;
+        }
+        @media (min-width: 1150px) {
+          right: 72%;
+        }
+        @media (min-width: 1175px) {
+          right: 73%;
+        }
+        @media (min-width: 1200px) {
+          right: 75%;
+        }
+        @media (min-width: 1225px) {
+          right: 76%;
+        }
+        @media (min-width: 1250px) {
+          right: 78%;
+        }
+        @media (min-width: 1275px) {
+          right: 79%;
+        }
+        @media (min-width: 1300px) {
+          right: 80%;
+        }
+        @media (min-width: 1325px) {
+          right: 81%;
+        }
+        @media (min-width: 1350px) {
+          right: 82%;
+        }
+        @media (min-width: 1375px) {
+          right: 83%;
+        }
+        @media (min-width: 1400px) {
+          right: 84%;
+        }
+        @media (min-width: 1425px) {
+          right: 87%;
+        }
+        @media (min-width: 1450px) {
+          right: 87%;
+        }
+        @media (min-width: 1475px) {
+          right: 87%;
+        }
+        @media (min-width: 1500px) {
+          right: 90%;
+        }
+        @media (min-width: 1550px) {
+          right: 92%;
+        }
+        @media (min-width: 1600px) {
+          right: 95%;
+        }
+        @media (min-width: 1650px) {
+          right: 97%;
+        }
+        @media (min-width: 1700px) {
+          right: 99%;
+        }
+        @media (min-width: 1750px) {
+          right: 130%;
+        }
+        @media (min-width: 1800px) {
+          right: 135%;
+        }
+        @media (min-width: 1850px) {
+          right: 140%;
+        }
+        @media (min-width: 1900px) {
+          right: 145%;
+        }
+        @media (min-width: 1950px) {
+          right: 150%;
+        }
+        @media (min-width: 2000px) {
+          right: 155%;
+        }
+        @media (min-width: 2050px) {
+          right: 115%;
+        }
+        @media (min-width: 2200px) {
+          right: 113%;
+          top: 40%;
+        }
+        @media (min-width: 2263px) {
+          right: 108%;
+          top: 40%;
+        }
+        @media (min-width: 2440px) {
+          right: 111%;
+          top: 40%;
+        }
+        .myprojects-inner {
+          max-width: 100%;
+          height: 100%;
+          width: 100%;
+          background-color: #000;
+        }
+        // &:before {
+        //     content: '';
+        //     position: absolute;
+        //     height: 1300px;
+        //     border-left: 3px dashed #ffffff;
+        //     top: 400px;
+        //     z-index: -1;
+        //     left: 50%;
+        // }
+      }
+    }
+  }
+
+  .squares-last {
+    display: flex;
+    flex-direction: row;
+    height: 1400px;
+    width: 100%;
+    position: relative;
+    background-image: url("/img/bluerotated.svg");
+    .contact-container {
+      position: absolute;
+      bottom: 500px;
+      z-index: 50;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 500px;
+      // &::before {
+      //     // content: ' ';
+      //     // position: absolute;
+      //     // left: 0;
+      //     // right: 0;
+      //     // margin-left: auto;
+      //     // margin-right: auto;
+      //     // width: 5px;
+      //     // height: 5px;
+      //     // background-color: red;
+      // }
+      // &::before {
+      //     content: '';
+      //     position: absolute;
+      //     height: 1300px;
+      //     border-left: 3px dashed #ffffff;
+      //     top: -800px;
+      //     z-index: 0;
+      //     left: 50%;
+      // }
+      .contact-inner {
+        height: 100%;
+        width: 100%;
+        z-index: 50;
+      }
+    }
+  }
 }

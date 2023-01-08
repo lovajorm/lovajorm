@@ -1,9 +1,14 @@
-import React, { useRef, useState, useEffect } from 'react'
-import { useOnScreen } from '../hooks/CustomHooks'
+import React, { useState, useEffect } from 'react'
+//import { useOnScreen } from '../hooks/CustomHooks'
+import { useInView } from 'react-intersection-observer'
 
 function Techniques() {
-    const ref = useRef()
-    const isVisible = useOnScreen(ref)
+    // const ref = useRef()
+    // const isVisible = useOnScreen(ref)
+    const { ref, inView } = useInView({
+        /* Optional options */
+        threshold: 0,
+    })
 
     const [width, setWidth] = useState(window.innerWidth)
     const [isMobile, setIsMobile] = useState()
@@ -26,7 +31,7 @@ function Techniques() {
             <div className='techniques-container'>
                 <div
                     className={
-                        isVisible
+                        inView
                             ? 'techniques-headings child visible'
                             : 'techniques-headings child'
                     }
@@ -35,11 +40,11 @@ function Techniques() {
                     {!isMobile && <h2>Techniques</h2>}
                 </div>
                 <div ref={ref}>
-                    <div className={isVisible ? 'techniques-inner' : ''}>
+                    <div className={inView ? 'techniques-inner' : ''}>
                         {isMobile && (
                             <h2
                                 className={
-                                    isVisible
+                                    inView
                                         ? 'techniques-heading child visible'
                                         : 'techniques-heading child'
                                 }

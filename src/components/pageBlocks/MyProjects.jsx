@@ -1,9 +1,16 @@
-import React, { useRef } from 'react'
-import { useOnScreen } from '../hooks/CustomHooks'
+import React from 'react'
+import { useEffect } from 'react'
+import { useState } from 'react'
+//import { useOnScreen } from '../hooks/CustomHooks'
+import { useInView } from 'react-intersection-observer'
 
 function MyProjects() {
-    const ref = useRef()
-    const isVisible = useOnScreen(ref)
+    // const ref = useRef()
+    // const isVisible = useOnScreen(ref)
+    const { ref, inView } = useInView({
+        /* Optional options */
+        threshold: 0,
+    })
 
     return (
         <div className='myprojects-outer'>
@@ -13,7 +20,7 @@ function MyProjects() {
                     <div ref={ref}>
                         <div
                             className={
-                                isVisible
+                                inView
                                     ? 'myprojects-inner myprojects-no-border'
                                     : 'myprojects-no-border'
                             }

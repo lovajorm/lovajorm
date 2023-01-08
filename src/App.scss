@@ -73,3 +73,68 @@ form {
         box-shadow: inset 0px 0px 30px rgba(255, 255, 255, 0.705);
     }
 }
+
+// svg {
+//     position: absolute;
+//     width: 80%;
+//     height: 80%;
+// }
+
+// .container {
+//     height: 80vh;
+//     display: flex;
+//     align-items: center;
+//     padding: rem(60);
+// }
+
+// .text--line {
+//     font: 3em/1 'bt_mono';
+//     font-weight: 400;
+// }
+
+// .text--transparent {
+//     fill: transparent;
+//     stroke: #fff;
+//     stroke-width: 0.5px;
+//     stroke-dasharray: 800;
+//     stroke-dashoffset: 800;
+//     stroke-linecap: square;
+//     stroke-linejoin: miter;
+
+//     animation: stroke-text 3s both cubic-bezier(0.64, 0, 0.07, 1);
+// }
+
+// .anim-shape {
+//     transform-origin: 0 0;
+//     transform: scale(0, 1) translate(0, 0);
+
+//     animation: moving-panel 2s 800ms both cubic-bezier(0.64, 0, 0.07, 1);
+// }
+
+// // .anim-shape:nth-child(1) {
+// //     fill: #329cc2;
+// // }
+// // .anim-shape:nth-child(2) {
+// //     fill: #fff;
+// // }
+// // .anim-shape:nth-child(3) {
+// //     fill: #ff3939;
+// // }
+// // .anim-shape:nth-child(4) {
+// //     fill: #f8e27a;
+// // }
+// .anim-shape:nth-child(5) {
+//     //fill: #fff;
+// }
+
+// @keyframes moving-panel {
+//     100% {
+//         transform: scale(1, 1) translate(20px, 0);
+//     }
+// }
+
+// @keyframes stroke-text {
+//     100% {
+//         stroke-dashoffset: 0;
+//     }
+// }

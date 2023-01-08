@@ -27,6 +27,7 @@
         }
     }
     .outer {
+        display: flex;
         margin: 9rem 1rem;
     }
     .introduction-container,
@@ -107,9 +108,11 @@
         }
     }
     .github-container {
+        display: flex;
         width: 280px;
         height: 572px;
         .github-no-border {
+            display: flex;
             width: 280px;
             height: 200px;
             left: 0;

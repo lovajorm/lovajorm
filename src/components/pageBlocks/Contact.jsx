@@ -1,15 +1,20 @@
-import React, { useRef } from 'react'
-import { useOnScreen } from '../hooks/CustomHooks'
+import React from 'react'
+//import { useOnScreen } from '../hooks/CustomHooks'
+import { useInView } from 'react-intersection-observer'
 
 function Contact() {
-    const ref = useRef()
-    const isVisible = useOnScreen(ref)
+    const { ref, inView } = useInView({
+        /* Optional options */
+        threshold: 0,
+    })
+    // const ref = useRef()
+    // const isVisible = useOnScreen(ref)
     return (
         <div className='outer'>
             <div className='contact-container'>
                 <h2>Contact</h2>
                 <div ref={ref}>
-                    <div className={isVisible ? 'contact-inner' : ''}>
+                    <div className={inView ? 'contact-inner' : ''}>
                         <div className='inner'>
                             <div className='text'>
                                 If you're interested in any of my work please

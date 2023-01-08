@@ -123,11 +123,6 @@ function Home() {
                         <div className='first-row'></div>
                         <div className='second-row'></div>
                         <Contact />
-                        <img
-                            className='blueprint-3'
-                            src='img/black.png'
-                            alt='blueprint'
-                        />
                     </div>
                 </div>
             )}
