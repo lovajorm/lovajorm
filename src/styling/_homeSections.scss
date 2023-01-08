@@ -1,143 +1,177 @@
-@import './styling/_animations.scss';
+@import "src/styling/_animations.scss";
 
 .intro {
-    height: 100%;
-    margin-top: 40rem;
-    z-index: 10;
-    .copy {
-        display: flex;
-        flex-direction: column-reverse;
-        h1 {
-            margin-top: 0;
-        }
+  height: 100%;
+  margin-top: 40rem;
+  z-index: 10;
+  .copy {
+    display: flex;
+    flex-direction: column-reverse;
+    h1 {
+      margin-top: 0;
     }
+  }
 }
 .introduction-container,
 .myprojects-container,
 .techniques-container,
 .github-container,
 .contact-container {
-    .introduction-inner,
-    .myprojects-inner,
-    .techniques-inner,
-    .github-inner,
-    .contact-inner {
-        position: relative;
-        &:after {
-            background-color: #000;
-            z-index: -1;
-            position: absolute;
-            content: '';
-            height: 100%;
-            width: 100%;
-            left: 0;
-            bottom: 0;
-            border: 2px solid rgba(255, 255, 255, 0.616);
-            border-radius: 5px;
-            box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.383),
-                0px 0px 15px rgba(255, 255, 255, 0.329);
-            animation-name: flicker;
-            animation: flicker 2s linear forwards;
-            animation-delay: 0.5s;
-            filter: brightness(0.1);
-        }
+  .introduction-inner,
+  .myprojects-inner,
+  .techniques-inner,
+  .github-inner,
+  .contact-inner {
+    position: relative;
+    &:after {
+      background-color: #000;
+      z-index: -1;
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      border: 2px solid rgba(255, 255, 255, 0.616);
+      border-radius: 5px;
+      box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.383),
+        0px 0px 15px rgba(255, 255, 255, 0.329);
+      animation-name: flicker;
+      animation: flicker 2s linear forwards;
+      animation-delay: 0.5s;
+      filter: brightness(0.1);
     }
+  }
 }
 .introduction-container {
-    .introduction-inner {
-        .text {
-            padding: 2rem 3rem 2.5rem;
-        }
+  .introduction-inner {
+    padding: 2rem 3rem 2.5rem;
+    .social-icons {
+      margin-top: 1rem;
+      svg {
+        opacity: 0.6;
+        transition: 0.2s;
+      }
+      svg:hover {
+        opacity: 1;
+        transition: 0.5s;
+      }
     }
+  }
 }
 .techniques-container {
-    .techniques-headings {
+  .techniques-headings {
+    display: flex;
+    justify-content: space-between;
+    h2 {
+      font-size: 2.2rem;
+    }
+  }
+  .inner {
+    flex-direction: row;
+    z-index: 50;
+    .col {
+      width: 50%;
+      .text {
+        padding: 0.7rem 1.2rem 0;
+      }
+      .logos-platforms {
         display: flex;
-        justify-content: space-between;
-        h2 {
-            font-size: 2.2rem;
+        flex-direction: column;
+        margin-left: 2.5rem;
+        img {
+          height: 70px;
+          width: 200px;
+          margin-top: 1rem;
         }
-    }
-    .inner {
-        flex-direction: row;
-        z-index: 50;
-        .col {
-            width: 50%;
-            .text {
-                padding: 2rem 3rem 0;
-            }
-            .logos-platforms {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                img {
-                    height: 70px;
-                    width: 200px;
-                    margin-top: 1.5rem;
-                }
-            }
-            .logos {
-                padding: 1rem 2rem;
-                .logo {
-                    margin: 1rem;
-                    width: 75px;
-                    height: 75px;
-                }
-            }
+        .logo.azure {
+          height: 50px;
+          margin-top: 0rem;
+          padding-top: 1.3rem;
+          margin-left: -1rem;
         }
+        .logo.vs {
+          width: 70px;
+          margin-left: 4rem;
+          margin-top: 0;
+          padding-top: 1rem;
+        }
+        .logo.sql {
+          filter: brightness(10);
+          width: 70px;
+          margin-left: 3rem;
+        }
+        .azure {
+          display: flex;
+        }
+      }
+      .logos {
+        display: flex;
+        padding: 1rem 0rem;
+        .logo {
+          margin: 1rem;
+          width: 75px;
+          height: 75px;
+        }
+      }
     }
+  }
 }
 .github-container {
-    .github-no-border {
-        background-image: url('/img/GitHub-Mark-Light-120px-plus.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 200px;
-        width: 250px;
-    }
+  .github-no-border {
+    background-image: url("../../public/img/GitHub-Mark-Light-120px-plus.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+    width: 250px;
+  }
 }
 .myprojects-container {
-    .myprojects-no-border {
-        padding: 0rem 0rem 2rem;
-        background-color: unset !important;
-        .projects {
-            display: flex;
-            padding-left: 3rem;
-            z-index: 50;
-            .col {
-                display: flex;
-                flex-direction: column;
-                .text {
-                    min-height: 150px;
-                    max-width: 380px;
-                    margin-top: 2rem;
-                    padding-right: 1rem;
-                }
-            }
-            .inner.project {
-                margin-top: 1rem;
-                margin-right: 3rem;
-                height: 200px;
-                width: 200px;
-                padding: 1rem;
-                // border: 2px solid rgba(255, 255, 255, 0.616);
-                // border-radius: 5px;
-                // box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.383),
-                //     0px 0px 15px rgba(255, 255, 255, 0.329);
-                img {
-                    height: 200px;
-                    width: 200px;
-                }
-            }
+  .myprojects-no-border {
+    padding: 0rem 0rem 1rem;
+    background-color: unset !important;
+    .projects {
+      display: flex;
+      padding-left: 2rem;
+      z-index: 50;
+      .col {
+        display: flex;
+        flex-direction: column;
+        .text {
+          min-height: 150px;
+          max-width: 380px;
+          margin-top: 1.5rem;
+          padding-right: 1rem;
         }
+      }
+      .inner.project {
+        // margin-top: 1rem;
+        // margin-right: 3rem;
+        // height: 200px;
+        // width: 200px;
+        // padding: 1rem;
+        // border: 2px solid rgba(255, 255, 255, 0.616);
+        // border-radius: 5px;
+        // box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.383),
+        //     0px 0px 15px rgba(255, 255, 255, 0.329);
+        img {
+          height: 200px;
+          width: 200px;
+          margin: auto 1.5rem;
+        }
+      }
     }
+  }
 }
 
 .contact-container {
-    .contact-inner {
-        padding-bottom: 2rem;
-        .text {
-            padding: 2rem 3rem 0;
-        }
+  .contact-inner {
+    padding-bottom: 2rem;
+    .text {
+      padding: 2rem 3rem 0;
+      &.success {
+        padding: 0rem 3rem 0;
+      }
     }
+  }
 }

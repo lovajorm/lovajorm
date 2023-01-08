@@ -83,7 +83,7 @@
       filter: brightness(0.7);
       width: 500px;
       height: 1000px;
-      background-image: url("/img/blueprint3.svg");
+      background-image: url("../../public/img/blueprint3.svg");
       background-attachment: fixed;
       background-repeat: repeat-y;
       background-size: 100%;
@@ -131,7 +131,7 @@
       transform: translateY(-50%);
       .techniques-inner {
         height: 100%;
-        width: 800px;
+        width: 850px;
         display: flex;
       }
     }
@@ -228,7 +228,7 @@
           right: 82%;
         }
         @media (min-width: 1375px) {
-          right: 83%;
+          right: 84%;
         }
         @media (min-width: 1400px) {
           right: 84%;
@@ -258,37 +258,35 @@
           right: 99%;
         }
         @media (min-width: 1750px) {
-          right: 130%;
+          right: 99%;
         }
         @media (min-width: 1800px) {
-          right: 135%;
+          right: 100%;
         }
         @media (min-width: 1850px) {
-          right: 140%;
+          right: 101%;
         }
         @media (min-width: 1900px) {
-          right: 145%;
+          right: 102%;
         }
         @media (min-width: 1950px) {
-          right: 150%;
+          right: 104%;
+          top: 40%;
         }
         @media (min-width: 2000px) {
-          right: 155%;
+          right: 104%;
         }
         @media (min-width: 2050px) {
-          right: 115%;
+          right: 106%;
         }
         @media (min-width: 2200px) {
-          right: 113%;
-          top: 40%;
+          right: 108%;
         }
         @media (min-width: 2263px) {
-          right: 108%;
-          top: 40%;
+          right: 112%;
         }
         @media (min-width: 2440px) {
-          right: 111%;
-          top: 40%;
+          right: 114%;
         }
         .myprojects-inner {
           max-width: 100%;
@@ -315,7 +313,7 @@
     height: 1400px;
     width: 100%;
     position: relative;
-    background-image: url("/img/bluerotated.svg");
+    background-image: url("../../public/img/bluerotated.svg");
     .contact-container {
       position: absolute;
       bottom: 500px;

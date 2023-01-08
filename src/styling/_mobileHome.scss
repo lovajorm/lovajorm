@@ -1,212 +1,224 @@
 .mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  .intro {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    margin-top: 0;
+    .copy {
+      padding: 0 1rem;
+      h1 {
+        font-size: 1.9rem;
+      }
+    }
+  }
+  .inner {
+    padding: 0;
+    .text {
+      padding: 0;
+      margin: 0;
+      max-width: 350px;
+    }
+  }
+  .outer {
+    display: flex;
+    margin: 9rem 1rem;
+  }
+  .introduction-container,
+  .techniques-container,
+  .github-container,
+  .myprojects-container,
+  .contact-container {
     position: relative;
-    .intro {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        margin-top: 0;
-        .copy {
-            padding: 0 1rem;
-            h1 {
-                font-size: 1.9rem;
-            }
-        }
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    z-index: 1;
+    background-color: unset;
+    min-width: 100%;
+    height: 100%;
+  }
+  .introduction-container {
+    z-index: 2;
+    opacity: 0.8;
+    .introduction-inner {
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 340px;
+      padding: 1.2rem 1.4rem 2rem 1.4rem;
+      .text {
+        opacity: 1;
+      }
     }
-    .inner {
-        padding: 0;
+  }
+  .techniques-container {
+    min-width: 260px;
+    max-width: 100%;
+    padding-right: 2.6rem;
+    .techniques-headings {
+      display: flex;
+      flex-direction: column;
+      h2 {
+        font-size: 1.7rem;
+      }
+    }
+    .techniques-inner {
+      position: relative;
+      padding: 1.2rem 0.5rem 2rem 0.5rem;
+      .techniques-heading {
+        position: absolute;
+        transform: rotate(90deg);
+        bottom: 100px;
+        right: -145px;
+      }
+      .inner {
+        flex-direction: column;
+        z-index: 50;
         .text {
-            padding: 0;
-            margin: 0;
-            max-width: 350px;
+          margin-bottom: 1rem;
+          padding: 0 1rem;
         }
+        img {
+          max-height: 80px;
+          max-width: 80px;
+        }
+        img.azure {
+          max-height: 35px;
+          max-width: 200px;
+          margin-bottom: 1rem;
+          margin-left: 2.6rem;
+        }
+        img.google {
+          max-height: 50px;
+          max-width: 200px;
+          margin-bottom: 1rem;
+          margin-left: 2.6rem;
+        }
+        .logos {
+          margin: 0.6rem 0;
+          display: flex;
+          justify-content: space-around;
+          margin-bottom: 1rem;
+          .logo.sql {
+            filter: brightness(10);
+          }
+        }
+      }
     }
-    .outer {
-        display: flex;
-        margin: 9rem 1rem;
+  }
+  .github-container {
+    display: flex;
+    width: 280px;
+    height: 572px;
+    .github-no-border {
+      display: flex;
+      width: 280px;
+      height: 200px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .introduction-container,
-    .techniques-container,
-    .github-container,
-    .myprojects-container,
-    .contact-container {
-        position: relative;
-        //margin: 9rem 1rem;
-        display: flex;
-        justify-content: center;
+  }
+  .myprojects-container {
+    .myprojects-no-border {
+      max-width: 487px;
+      height: unset;
+      padding: 1.2rem 1.4rem 2rem 1.4rem;
+      .row {
         flex-direction: column;
-        min-height: 100vh;
-        z-index: 1;
-        background-color: unset;
-        min-width: 100%;
-        height: 100%;
-    }
-    .introduction-container {
-        z-index: 2;
-        opacity: 0.8;
-        .introduction-inner {
-            left: 0;
-            right: 0;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 340px;
-            padding: 1.2rem 1.4rem 2rem 1.4rem;
-            .text {
-                opacity: 1;
-            }
-        }
-    }
-    .techniques-container {
-        min-width: 260px;
-        max-width: 100%;
-        padding-right: 2.6rem;
-        .techniques-headings {
+      }
+      .projects {
+        flex-direction: column;
+        padding: 0;
+        margin-top: 0rem;
+        width: 100%;
+        .col {
+          .text {
+            min-height: unset;
+            max-width: 380px;
+            margin-top: 1rem;
+            padding-right: 1rem;
+          }
+          .inner.project {
+            width: 100%;
             display: flex;
-            flex-direction: column;
-            h2 {
-                font-size: 1.7rem;
-            }
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+          }
         }
-        .techniques-inner {
-            position: relative;
-            padding: 1.2rem 1.4rem 2rem 1.4rem;
-            .techniques-heading {
-                position: absolute;
-                transform: rotate(90deg);
-                bottom: 100px;
-                right: -145px;
-            }
-            .inner {
-                flex-direction: column !important;
-                z-index: 50;
-                .col {
-                    width: 100%;
-                    .text {
-                        padding: 0;
-                    }
-                    .logos-platforms {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        img {
-                            margin-top: 0.5rem;
-                        }
-                    }
-                    .logos {
-                        padding: 0;
-                        display: flex;
-                        justify-content: center;
-                        flex-wrap: wrap;
-                    }
-                }
-            }
+      }
+    }
+  }
+  .contact-container {
+    .contact-inner {
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 400px;
+      height: unset;
+      padding: 1.2rem 1.4rem 2rem 1.4rem;
+      form {
+        padding: 0;
+        width: 100%;
+        .form-control {
+          padding-left: 0;
         }
-    }
-    .github-container {
-        display: flex;
-        width: 280px;
-        height: 572px;
-        .github-no-border {
-            display: flex;
-            width: 280px;
-            height: 200px;
-            left: 0;
-            right: 0;
-            margin-left: auto;
-            margin-right: auto;
+        input,
+        textarea {
+          width: 94%;
         }
-    }
-    .myprojects-container {
-        .myprojects-no-border {
-            max-width: 487px;
-            height: unset;
-            padding: 1.2rem 1.4rem 2rem 1.4rem;
-            .row {
-                flex-direction: column;
-            }
-            .projects {
-                flex-direction: column;
-                padding: 0;
-                margin-top: 0rem;
-                width: 100%;
-                .col {
-                    .text {
-                        min-height: unset;
-                        max-width: 380px;
-                        margin-top: 1rem;
-                        padding-right: 1rem;
-                    }
-                    .inner.project {
-                        width: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        padding: 0;
-                    }
-                }
-            }
+        input[type="submit"] {
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
         }
+      }
+      .text.success {
+        padding: 0;
+        margin-top: 1rem;
+      }
     }
-    .contact-container {
-        .contact-inner {
-            left: 0;
-            right: 0;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 400px;
-            height: unset;
-            padding: 1.2rem 1.4rem 2rem 1.4rem;
-            form {
-                padding: 0;
-                width: 100%;
-                .form-control {
-                    padding-left: 0;
-                }
-                input,
-                textarea {
-                    width: 94%;
-                }
-                input[type='submit'] {
-                    width: 100%;
-                    margin-left: auto;
-                    margin-right: auto;
-                    display: block;
-                }
-            }
-        }
-    }
-    .blueprint-1 {
-        position: absolute;
-        top: 5%;
-        left: 0;
-        z-index: 1;
-        filter: brightness(0.7);
-        width: 100vw;
-        height: 300vh;
-        background-image: url('/img/blueprint3.svg');
-        background-attachment: fixed;
-        background-repeat: repeat-y;
-        background-size: 100%;
-    }
-    .blueprint-2 {
-        position: absolute;
-        bottom: 30%;
-        left: 0;
-        z-index: 0;
-        filter: brightness(3);
-        height: 150vh;
-    }
-    .blueprint-3 {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: 0;
-        filter: brightness(3);
-        height: 100vh;
-    }
+  }
+  .blueprint-1 {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    z-index: 1;
+    filter: brightness(0.5);
+    width: 100vw;
+    height: 300vh;
+    background-image: url("../../public/img/blueprint3.svg");
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+    background-size: 100%;
+  }
+  .blueprint-2 {
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    z-index: 0;
+    filter: brightness(3);
+    height: 150vh;
+  }
+  .blueprint-3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    filter: brightness(2);
+    height: 100vh;
+  }
 }
